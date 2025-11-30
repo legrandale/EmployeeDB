@@ -3,9 +3,7 @@ SRC = $(wildcard src/*.c)
 OBJ = $(patsubst src/%.c, obj/%.o, $(SRC))
 
 run : clean default
-	./$(TARGET)
-	./$(TARGET) -n
-	./$(TARGET) -f prout.db
+	./$(TARGET) -f prout.db -n
 	
 # Execute target
 default : $(TARGET)
